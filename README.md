@@ -126,4 +126,4 @@ $ kvm-ssh forward --user <ssh_username> --bridge <bridge_name> --port <port1>,<p
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) for details.
+This project is licensed under the [MIT License](./LICENSE).
