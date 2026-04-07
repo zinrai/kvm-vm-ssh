@@ -1,6 +1,6 @@
-# KVM SSH Connection and Port Forwarding Tool
+# kvm-vm-ssh
 
-`kvm-ssh` is a command-line tool designed to simplify SSH connections to KVM (Kernel-based Virtual Machine) instances and provide easy port forwarding capabilities.
+`kvm-vm-ssh` is a command-line tool designed to simplify SSH connections to KVM (Kernel-based Virtual Machine) instances and provide easy port forwarding capabilities.
 
 ## Features
 
@@ -16,18 +16,18 @@
 
 ## Installation
 
-To install `kvm-ssh`, clone the repository and build the tool:
+To install `kvm-vm-ssh`, clone the repository and build the tool:
 
 ```bash
 $ go build
 ```
 
-Make sure to place the built `kvm-ssh` binary in your system's PATH for easy access.
+Make sure to place the built `kvm-vm-ssh` binary in your system's PATH for easy access.
 
 ## Usage
 
 ```
-kvm-ssh [options] <vm_name>
+kvm-vm-ssh [options] <vm_name>
 ```
 
 ### Options
@@ -45,31 +45,31 @@ kvm-ssh [options] <vm_name>
 Connect to a VM:
 
 ```bash
-$ kvm-ssh ubuntu-vm
+$ kvm-vm-ssh ubuntu-vm
 ```
 
 Connect with a specific user and bridge:
 
 ```bash
-$ kvm-ssh -user john -bridge br0 debian-vm
+$ kvm-vm-ssh -user john -bridge br0 debian-vm
 ```
 
 Local port forwarding:
 
 ```bash
-$ kvm-ssh -local 2375,40413 bookworm64-docker
+$ kvm-vm-ssh -local 2375,40413 bookworm64-docker
 ```
 
 Remote port forwarding:
 
 ```bash
-$ kvm-ssh -remote 3000 dev-vm
+$ kvm-vm-ssh -remote 3000 dev-vm
 ```
 
 Both local and remote forwarding with SSH options:
 
 ```bash
-$ kvm-ssh -local 8080 -remote 3000 -ssh-opts "-o StrictHostKeyChecking=no" dev-vm
+$ kvm-vm-ssh -local 8080 -remote 3000 -ssh-opts "-o StrictHostKeyChecking=no" dev-vm
 ```
 
 ## License

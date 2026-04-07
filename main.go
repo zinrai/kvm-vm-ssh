@@ -39,7 +39,7 @@ func getVMIP(vmName, bridgeName string) (string, error) {
 }
 
 func usage() {
-	fmt.Fprintf(os.Stderr, "Usage: kvm-ssh [options] <vm_name>\n\n")
+	fmt.Fprintf(os.Stderr, "Usage: kvm-vm-ssh [options] <vm_name>\n\n")
 	fmt.Fprintf(os.Stderr, "Options:\n")
 	flag.PrintDefaults()
 }

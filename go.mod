@@ -1,3 +1,3 @@
-module github.com/zinrai/kvm-ssh
+module github.com/zinrai/kvm-vm-ssh
 
-go 1.22.5
+go 1.25.0
