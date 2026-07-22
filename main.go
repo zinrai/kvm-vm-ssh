@@ -52,9 +52,15 @@ func main() {
 	local := flag.String("local", "", "Local forward ports (comma-separated)")
 	remote := flag.String("remote", "", "Remote forward ports (comma-separated)")
 	sshOpts := flag.String("ssh-opts", "", "Additional SSH options")
+	showVersion := flag.Bool("version", false, "Print version information and exit")
 
 	flag.Usage = usage
 	flag.Parse()
+
+	if *showVersion {
+		printVersion()
+		os.Exit(0)
+	}
 
 	if flag.NArg() != 1 {
 		flag.Usage()
