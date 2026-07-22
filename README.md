@@ -14,16 +14,6 @@
 - Ensure that the `ssh` command is available on your system.
 - The tool reads VM information from `/var/lib/libvirt/dnsmasq/<bridge_name>.status`.
 
-## Installation
-
-To install `kvm-vm-ssh`, clone the repository and build the tool:
-
-```bash
-$ go build
-```
-
-Make sure to place the built `kvm-vm-ssh` binary in your system's PATH for easy access.
-
 ## Usage
 
 ```
